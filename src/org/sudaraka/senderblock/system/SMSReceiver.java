@@ -19,7 +19,7 @@ public class SMSReceiver extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		Intent i = new Intent();
+		Intent i = new Intent(context, MessageFilterStatActivity.class);
 		PendingIntent pi = PendingIntent.getActivity(context, 0, i, 0);
 
 		Notification notification = new NotificationCompat.Builder(context)
