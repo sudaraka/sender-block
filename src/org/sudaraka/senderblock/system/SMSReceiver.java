@@ -33,6 +33,19 @@ public class SMSReceiver extends BroadcastReceiver {
 
 		NotificationManager nm = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 		nm.notify(0, notification);
+
+		Bundle b = intent.getExtras();
+		if(null != b) {
+			Object[] pdus = (Object[]) b.get("pdus");
+			SmsMessage[] msg_list = new SmsMessage[pdus.length];
+			MessagesSMS stat = new MessagesSMS(context);
+
+			for(int idx = 0; idx < msg_list.length; idx++) {
+				msg_list[idx] = SmsMessage.createFromPdu((byte[]) pdus[idx]);
+
+				stat.add(msg_list[idx].getOriginatingAddress(), (int) msg_list[idx].getTimestampMillis() / 1000);
+			}
+		}
 	}
 
 }
