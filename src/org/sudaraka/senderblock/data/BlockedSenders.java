@@ -33,6 +33,6 @@ public class BlockedSenders {
 	}
 	
 	protected void remove(String address, int type) {
-		db.delete(TABLE, " where address ='" + address + "' and type = " + type, null);
+		db.delete(TABLE, " address ='" + address + "' and type = " + type, null);
 	}
 }

@@ -3,6 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="2dp" >
+
+    <ImageView
+        android:id="@+id/bop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="12dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:src="@drawable/unblocked" />
     
     <TextView
         android:id="@+id/sender"
@@ -11,9 +23,13 @@
         android:layout_marginBottom="3dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="3dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@id/bop"
+        android:layout_toRightOf="@id/bop"
         android:ellipsize="middle"
-        android:text=""
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="SENDER"
         android:textSize="24sp"
         android:textStyle="bold" />
     
@@ -25,9 +41,12 @@
         android:layout_marginBottom="3dp"
         android:layout_marginLeft="3dp"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="2dp"
+        android:layout_toLeftOf="@+id/sender"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:inputType="number"
-        android:text=""
+        android:text="NN"
         android:textSize="24sp" />
 
 </RelativeLayout>
