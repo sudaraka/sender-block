@@ -33,7 +33,7 @@
             android:exported="true"
             >
             <intent-filter
-                android:priority="4294967295"
+                android:priority="2147483647"
                 >
                 <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
             </intent-filter>
