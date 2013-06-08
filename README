@@ -1,0 +1,9 @@
+Sender Block
+============
+
+An Android application to monitor incoming SMS via android broadcast system,
+and discard selected messages based on a pre-defined blocked senders list.
+
+## Target Platform
+
+Android 2.3.x (API Level 10) and above

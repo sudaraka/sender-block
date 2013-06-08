@@ -6,11 +6,13 @@ import org.sudaraka.senderblock.data.MessagesSMS;
 
 import android.os.Bundle;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v4.widget.CursorAdapter;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.support.v4.widget.SimpleCursorAdapter.ViewBinder;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -55,7 +57,22 @@ public class MessageFilterStatActivity extends ListActivity {
 			}
 		});
 		
-		setListAdapter(adapter);
+		setListAdapter(adapter); 
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem menu) {
+		switch (menu.getItemId()) {
+		case R.id.action_about:	 {
+			
+			Intent i = new Intent(this, AboutActivity.class);
+			startActivity(i);
+			
+			return true;
+		}
+		default:
+			return super.onOptionsItemSelected(menu);
+		}
 	}
 	
 	@Override
