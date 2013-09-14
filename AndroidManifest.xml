@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.sudaraka.senderblock"
-    android:versionCode="1"
-    android:versionName="0.1 (beta)" >
+    android:versionCode="2"
+    android:versionName="0.1-2 (beta)" >
 
     <uses-sdk
         android:minSdkVersion="10"
-        android:targetSdkVersion="17" />
+        android:targetSdkVersion="18" />
 
     <uses-permission android:name="android.permission.RECEIVE_SMS"/>
 
@@ -33,7 +33,6 @@
         <receiver
             android:name=".system.SMSReceiver"
             android:enabled="true"
-            android:permission="android.permission.RECEIVE_SMS"
             android:exported="true"
             >
             <intent-filter
